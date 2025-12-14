@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>מחשבון מאזן חניה – ארליך טל הנדסה</title>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="brand">
+        <div class="logo-placeholder" aria-hidden="true">AT</div>
+        <div class="brand-text">
+          <h1>מחשבון מאזן חניה</h1>
+          <p class="brand-sub">ארליך טל הנדסה</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <p>הכנסו ייעוד וכמות (יח"ד / מ"ר / כיתות וכו') כדי לקבל חישוב דרישת חניה לפי התקן הארצי והשוואה להיצע בפועל.</p>
+      </section>
+
+      <section class="form">
+        <label for="purpose">ייעוד:</label>
+        <select id="purpose" aria-label="ייעוד"></select>
+
+        <label for="zone">איזור לפי מתע"ן (א/ב/ג):</label>
+        <select id="zone" aria-label="איזור">
+          <option value="א">א</option>
+          <option value="ב">ב</option>
+          <option value="ג">ג</option>
+        </select>
+
+        <label for="qty">הזן כמות (לפי הייעוד - דוגמה: יח"ד / מ"ר / כיתות):</label>
+        <input id="qty" type="number" min="0" step="1" placeholder="הזן מספר">
+
+        <label for="supply">היצע קיים (מספר חניות בפועל) — אופציונלי:</label>
+        <input id="supply" type="number" min="0" step="1" placeholder="היצע קיים">
+
+        <div class="actions">
+          <button id="calc" class="btn-primary">חשב מאזן</button>
+          <button id="reset" class="btn-ghost">אפס</button>
+        </div>
+      </section>
+
+      <section id="results" class="results" style="display:none;">
+        <h2>תוצאות</h2>
+        <table id="results-table" class="results-table" aria-live="polite">
+          <thead><tr><th>ייעוד</th><th>כמות</th><th>יחידה</th><th>דרישה לפי תקן</th><th>היצע</th><th>מאזן</th></tr></thead>
+          <tbody></tbody>
+        </table>
+        <div id="summary" class="summary" role="status"></div>
+      </section>
+
+      <section class="notes">
+        <h3>הערות</h3>
+        <ul>
+          <li>הערכים מבוססים על תקן ארצי כערכי ברירת מחדל. יש להתאים לוועדה המקומית במקרה של תכנון רשמי.</li>
+          <li>ניתן לערוך את הקובץ standards.json כדי לשנות תקנים ונתונים.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>ארליך טל הנדסה &middot; מחשבון מאזן חניה</p>
+    </footer>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
