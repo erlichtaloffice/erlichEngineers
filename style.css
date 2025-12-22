@@ -16,11 +16,39 @@ body{margin:0;background:var(--bg);color:var(--text);direction:rtl;font-family:v
 .container{max-width:980px;margin:28px auto;padding:22px;background:linear-gradient(180deg, #fff 0%, #fbfdff 100%);border-radius:12px;box-shadow:0 6px 30px rgba(10,63,125,0.06);border:1px solid var(--border)}
 
 /* Header */
-.site-header{display:flex;align-items:center;gap:16px;margin-bottom:6px}
-.brand{display:flex;align-items:center;gap:12px}
-.logo-placeholder{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--primary), #0E4C8A);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px}
-.brand-text h1{margin:0;font-size:20px;color:var(--primary)}
-.brand-sub{margin:0;font-size:13px;color:var(--muted)}
+.site-header {
+  text-align: center;
+  padding: 24px 16px 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.site-logo {
+  max-width: 280px;
+  max-height: 120px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.site-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0b3a6a;
+  margin: 8px 0 2px;
+}
+
+.site-subtitle {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin: 0;
+}
+
 
 /* Intro */
 .intro{padding:10px 0;color:var(--muted)}
