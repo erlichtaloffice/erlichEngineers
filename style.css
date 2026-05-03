@@ -66,3 +66,10 @@ body{margin:0;background:var(--bg);color:var(--text);direction:rtl;font-family:v
   .brand-text h1{font-size:18px}
   .logo-placeholder{width:55px;height:55px}
 }
+
+.site-footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #777;
+  font-size: 13px;
+}
